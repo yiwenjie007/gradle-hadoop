@@ -1,0 +1,35 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.master'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter')
+    compile 'org.apache.avro:avro:1.8.2'
+    compile 'org.apache.avro:avro-tools:1.8.2'
+    compile 'org.apache.parquet:parquet:1.10.0'
+    compile 'org.apache.parquet:parquet-tools:1.10.0'
+    compile 'org.apache.parquet:parquet-avro:1.10.0'
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
