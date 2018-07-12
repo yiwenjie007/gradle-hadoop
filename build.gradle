@@ -31,5 +31,7 @@ dependencies {
     compile 'org.apache.parquet:parquet:1.10.0'
     compile 'org.apache.parquet:parquet-tools:1.10.0'
     compile 'org.apache.parquet:parquet-avro:1.10.0'
+    compile 'org.apache.flume:flume-ng-core:1.8.0'
+    compile 'org.apache.flume:flume-ng-clients:1.8.0'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
