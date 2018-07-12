@@ -7,7 +7,7 @@ public class FlumeDemo {
 
     private static Logger logger = LoggerFactory.getLogger(FlumeDemo.class);
 
-    public static void main(String[] args){
-        logger.info("java-flume测试");
+    public static void main(String[] args) {
+            logger.info("java-flume测试1");
     }
 }
