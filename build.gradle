@@ -3,7 +3,9 @@ buildscript {
         springBootVersion = '2.0.3.RELEASE'
     }
     repositories {
-        mavenCentral()
+            maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+            maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+       //mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -34,5 +36,7 @@ dependencies {
     compile 'org.apache.flume:flume-ng-core:1.8.0'
     compile 'org.apache.flume:flume-ng-clients:1.8.0'
     compile 'org.apache.flume.flume-ng-clients:flume-ng-log4jappender:1.8.0'
+    compile group: 'org.apache.poi', name: 'poi', version: '3.9'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
